@@ -1,7 +1,7 @@
 @author: Kamil Wisniewski
 
 *************Overview*************
-The purpose of this project was to create my my mymalloc() and myfree() functions, mimicking the built-in C ones;
+The purpose of this project was to create my mymalloc() and myfree() functions, mimicking the built-in C ones;
 however, I also wanted to add additional correctness-checking in an attempt to improve malloc and free as the original functions
 don't warn the user if they've made probable errors (Passing an invalid pointer into free.. etc.)
 
