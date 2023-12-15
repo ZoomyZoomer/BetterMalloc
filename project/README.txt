@@ -1,8 +1,8 @@
 @author: Kamil Wisniewski
 
 *************Overview*************
-The purpose of this project was to create our own mymalloc() and myfree() functions, mimicking the built-in C ones;
-however, I also wanted to add additional correctness-checking in an attempt to improve malloc and free as the original functions
+The purpose of this assignment was to create our own mymalloc() and myfree() functions, mimicking the built-in C ones;
+however, we also wanted to add additional correctness-checking in an attempt to improve malloc and free as the original functions
 don't warn the user if they've made probable errors (Passing an invalid pointer into free.. etc.)
 
 -----------------------------------------------------------------
@@ -11,7 +11,7 @@ don't warn the user if they've made probable errors (Passing an invalid pointer 
 
 <><>Reporting Errors<><>
 
-In order to build up on the current capabilites of malloc() and free(), I added error detection for various cases which will
+In order to build up on the current capabilites of malloc() and free(), we added error detection for various cases which will
 notify the user with a print statement, subsequently returning from the function so the user can analyze the error and make their corrections. 
 Let's go over some of the Errors we're keeping track of:
 
@@ -45,7 +45,8 @@ returning from free() right after.
 
 <><>Correctness Testing<><>
 
-I took a more 'mathematical' approach to testing the correctness of our program. We formatted each test (apart from the 1st one which was given in memtest.c) in a way similiar to a mathematical proof. I thought this approach would be more intuitive and logical in proving the correctness of our program.
+We took a more 'mathematical' approach to testing the correctness of our program. We formatted each test (apart from the 1st one which was given in memtest.c) in a way
+similiar to a mathematical proof. We thought this approach would be more intuitive and logical in proving the correctness of our program.
 
 --All Tests are conducted with 4096 byte memory--
 
@@ -96,13 +97,15 @@ I took a more 'mathematical' approach to testing the correctness of our program.
 
 <><>Performance Testing<><>
 
-1. For my first custom performance test (test4), I decided to test the performance of an absurd amount of adjacent merging when
+1. For our first custom performance test (test4), we decided to test the performance of an absurd amount of adjacent merging when
 currBlock is equal to the user-given ptr and the nextBlock is free. Here we assign two pointers, ptr1 and ptr2, a malloc(1000).
 By freeing ptr2 first: free(ptr2) and then free ptr1 second, free(ptr1), it forces the second free call free(ptr1) to merge with the
-recently freed block from ptr2. We run this loop 120 times and conduct it 50 times total (120 * 50 times).
+recently freed block from ptr2. We run this loop 120 times and conduct it 50 times total (120 * 50 times). We thought this would be a 
+good test since it wasn't something provided earlier.
 
-2. For my second custom performance test (test5), I decided to alternate between intentionally causing a random error, and calling
+2. For our second custom performance test (test5), we decided to alternate between intentionally causing a random error, and calling
 malloc() with a random byte value and free() successfully. We can't prevent the error messages from showing, so it'll flood the console
-a little bit, but the run time will be displayed at the very end.
+a little bit, but the run time will be displayed at the very end. We thought this was a unique way to test performance as none of the
+other previous tests mentioned anything about errors. 
 
         
