@@ -90,7 +90,7 @@ I took a more 'mathematical' approach to testing the correctness of my program. 
         - If we were to free(f+1), we would be freeing an address 1 byte past the given datablock
         - This should not be allowed, so an error message should be printed describing the mistake
 
-       For the fmyth error [4].. let's: int *p = malloc(sizeof(int)*100);  and  set: int *q = p;
+       For the fourth error [4].. let's: int *p = malloc(sizeof(int)*100);  and  set: int *q = p;
         - If we were to free(p) and simultaniously free(q), we would be freeing the same pointer twice
         - As we are not allowed to re-free an address, an error message should print describing the issue  
 
